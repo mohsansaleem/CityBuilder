@@ -1,0 +1,182 @@
+fileFormatVersion: 2
+guid: e5242c0884eec5d42ba48dfcdcb847cb
+timeCreated: 1499746177
+licenseType: Store
+ModelImporter:
+  serializedVersion: 18
+  fileIDToRecycleName:
+    100000: 7 Modular House.004
+    100002: Bench.022
+    100004: Building big.004
+    100006: Building medium.023
+    100008: Canopy.016
+    100010: Door.027
+    100012: Draining.005
+    100014: Duct.018
+    100016: Duct.033
+    100018: Flowerbed.005
+    100020: Luke.004
+    100022: //RootNode
+    100024: Stone.007
+    100026: Stone.031
+    100028: Stone.076
+    100030: Stone.085
+    100032: Stone.086
+    100034: Stone.101
+    100036: Tree.020
+    100038: Tree.052
+    100040: Tree.057
+    100042: Tree.082
+    100044: Window.029
+    100046: Window.041
+    400000: 7 Modular House.004
+    400002: Bench.022
+    400004: Building big.004
+    400006: Building medium.023
+    400008: Canopy.016
+    400010: Door.027
+    400012: Draining.005
+    400014: Duct.018
+    400016: Duct.033
+    400018: Flowerbed.005
+    400020: Luke.004
+    400022: //RootNode
+    400024: Stone.007
+    400026: Stone.031
+    400028: Stone.076
+    400030: Stone.085
+    400032: Stone.086
+    400034: Stone.101
+    400036: Tree.020
+    400038: Tree.052
+    400040: Tree.057
+    400042: Tree.082
+    400044: Window.029
+    400046: Window.041
+    2300000: 7 Modular House.004
+    2300002: Bench.022
+    2300004: Building big.004
+    2300006: Building medium.023
+    2300008: Canopy.016
+    2300010: Door.027
+    2300012: Draining.005
+    2300014: Duct.018
+    2300016: Duct.033
+    2300018: Flowerbed.005
+    2300020: Luke.004
+    2300022: Stone.007
+    2300024: Stone.031
+    2300026: Stone.076
+    2300028: Stone.085
+    2300030: Stone.086
+    2300032: Stone.101
+    2300034: Tree.020
+    2300036: Tree.052
+    2300038: Tree.057
+    2300040: Tree.082
+    2300042: Window.029
+    2300044: Window.041
+    3300000: 7 Modular House.004
+    3300002: Bench.022
+    3300004: Building big.004
+    3300006: Building medium.023
+    3300008: Canopy.016
+    3300010: Door.027
+    3300012: Draining.005
+    3300014: Duct.018
+    3300016: Duct.033
+    3300018: Flowerbed.005
+    3300020: Luke.004
+    3300022: Stone.007
+    3300024: Stone.031
+    3300026: Stone.076
+    3300028: Stone.085
+    3300030: Stone.086
+    3300032: Stone.101
+    3300034: Tree.020
+    3300036: Tree.052
+    3300038: Tree.057
+    3300040: Tree.082
+    3300042: Window.029
+    3300044: Window.041
+    4300000: Tree.020
+    4300002: Tree.057
+    4300004: Duct.018
+    4300006: 7 Modular House.004
+    4300008: Duct.033
+    4300010: Luke.004
+    4300012: Window.029
+    4300014: Window.041
+    4300016: Draining.005
+    4300018: Building big.004
+    4300020: Flowerbed.005
+    4300022: Stone.007
+    4300024: Stone.076
+    4300026: Stone.031
+    4300028: Stone.085
+    4300030: Stone.086
+    4300032: Stone.101
+    4300034: Canopy.016
+    4300036: Door.027
+    4300038: Building medium.023
+    4300040: Bench.022
+    4300042: Tree.082
+    4300044: Tree.052
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    optimizeGameObjects: 0
+    motionNodeName: 
+    animationCompression: 1
+    animationRotationError: .5
+    animationPositionError: .5
+    animationScaleError: .5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 100
+    meshCompression: 0
+    addColliders: 0
+    importBlendShapes: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    splitTangentsAcrossUV: 1
+    normalImportMode: 0
+    tangentImportMode: 1
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    human: []
+    skeleton: []
+    armTwist: .5
+    foreArmTwist: .5
+    upperLegTwist: .5
+    legTwist: .5
+    armStretch: .0500000007
+    legStretch: .0500000007
+    feetSpacing: 0
+    rootMotionBoneName: 
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 0
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

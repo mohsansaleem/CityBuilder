@@ -1,0 +1,69 @@
+{
+  "Modules": [
+    {
+      "moduleType": 0,
+      "ProductionType": 1,
+      "ProductionPerTimeUnit": 100,
+      "ProductionTimeUnit": 10,
+      "AutoProduction": true,
+      "CostGold": 100,
+      "CostWood": 0,
+      "CostIron": 0,
+      "ConstructionTime": 10,
+      "Width": 3,
+      "Length": 3
+    },
+    {
+      "moduleType": 1,
+      "ProductionType": 3,
+      "ProductionPerTimeUnit": 50,
+      "ProductionTimeUnit": 10,
+      "AutoProduction": false,
+      "CostGold": 150,
+      "CostWood": 100,
+      "CostIron": 0,
+      "ConstructionTime": 10,
+      "Width": 2,
+      "Length": 2
+    },
+    {
+      "moduleType": 2,
+      "ProductionType": 2,
+      "ProductionPerTimeUnit": 50,
+      "ProductionTimeUnit": 10,
+      "AutoProduction": false,
+      "CostGold": 150,
+      "CostWood": 0,
+      "CostIron": 0,
+      "ConstructionTime": 10,
+      "Width": 3,
+      "Length": 2
+    },
+    {
+      "moduleType": 4,
+      "ProductionType": 0,
+      "ProductionPerTimeUnit": 0,
+      "ProductionTimeUnit": 0,
+      "AutoProduction": false,
+      "CostGold": 50,
+      "CostWood": 200,
+      "CostIron": 0,
+      "ConstructionTime": 10,
+      "Width": 2,
+      "Length": 2
+    },
+    {
+      "moduleType": 3,
+      "ProductionType": 0,
+      "ProductionPerTimeUnit": 0,
+      "ProductionTimeUnit": 0,
+      "AutoProduction": false,
+      "CostGold": 150,
+      "CostWood": 0,
+      "CostIron": 50,
+      "ConstructionTime": 10,
+      "Width": 1,
+      "Length": 1
+    }
+  ]
+}
