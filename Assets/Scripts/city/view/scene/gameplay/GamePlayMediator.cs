@@ -75,18 +75,6 @@ namespace game.city.view
                 (EModuleType)_view.ModuleSelectionDropDown.value));
             
             OnGamePlayStateChanged(GamePlayModel.EGamePlayState.Load);
-            // Resetting GameTime
-            //SignalBus.Fire<ResetGameSignal>();
-            
-            // Check after each three second for new Animals.
-//            Observable.Timer(TimeSpan.FromSeconds(3)).Repeat()
-//                .Subscribe((interval) => SignalBus.Fire<SpawnIfSpaceSignal>())
-//                .AddTo(Disposables);
-            
-            // Timer Tick
-//            Observable.Timer(TimeSpan.FromSeconds(1)).Repeat()
-//                .Subscribe((interval) => SignalBus.Fire<GameTickSignal>())
-//                .AddTo(Disposables);
             
             _gamePlayModel.GamePlayState.Subscribe(OnGamePlayStateChanged).AddTo(Disposables);
         }

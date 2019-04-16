@@ -27,7 +27,7 @@ namespace game.city.view
 
         private void CreateModulesPool()
         {
-            // Instantiating a new prefab memory pool for Animals
+            // Instantiating a new prefab memory pool for Modules
             ModulesPool prefabPool = Container.Instantiate<ModulesPool>(new object[]
                 {
                     new MemoryPoolSettings()
