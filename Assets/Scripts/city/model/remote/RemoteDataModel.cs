@@ -1,5 +1,6 @@
 ﻿using System.Linq;
 using game.city.model.data;
+using game.city.view;
 using UniRx;
 using UnityEngine;
 using Zenject;
@@ -82,6 +83,11 @@ namespace game.city.model.remote
 
         public bool IsEmptyForModule(int wi, int li, int wm, int lm)
         {
+            if (wi + wm > Constants.GridWidth || li + lm > Constants.GridLength)
+            {
+                return false;
+            }
+            
             for (int w = wi; w < wi + wm; w++)
             {
                 for (int l = li; l < li + lm; l++)

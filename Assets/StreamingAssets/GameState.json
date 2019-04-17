@@ -3,40 +3,14 @@
     {
       "Id": 1,
       "moduleType": 0,
-      "LastCommandTime": "2019-04-17T00:56:36.4102798+05:00",
-      "IsInProduction": true,
-      "IsInConstruction": false,
-      "IsFull": false,
-      "CurrentPosition": {
-        "x": 0.0,
-        "y": 0.0,
-        "z": -20.0
-      }
-    },
-    {
-      "Id": 636910586785635460,
-      "moduleType": 2,
-      "LastCommandTime": "2019-04-17T00:56:27.4776499+05:00",
-      "IsInProduction": true,
-      "IsInConstruction": false,
-      "IsFull": false,
-      "CurrentPosition": {
-        "x": 30.0,
-        "y": 0.0,
-        "z": -80.0
-      }
-    },
-    {
-      "Id": 636910589662315622,
-      "moduleType": 2,
-      "LastCommandTime": "2019-04-17T00:56:30.6315419+05:00",
+      "LastCommandTime": "2019-04-18T03:13:03.3601328+05:00",
       "IsInProduction": true,
       "IsInConstruction": false,
       "IsFull": false,
       "CurrentPosition": {
         "x": 60.0,
         "y": 0.0,
-        "z": -30.0
+        "z": -10.0
       }
     }
   ],
@@ -45,41 +19,9 @@
       "Row": [
         false,
         false,
-        true,
-        true,
-        true,
         false,
         false,
         false,
-        false,
-        false,
-        false,
-        false
-      ]
-    },
-    {
-      "Row": [
-        false,
-        false,
-        true,
-        true,
-        true,
-        false,
-        false,
-        false,
-        false,
-        false,
-        false,
-        false
-      ]
-    },
-    {
-      "Row": [
-        false,
-        false,
-        true,
-        true,
-        true,
         false,
         false,
         false,
@@ -99,8 +41,24 @@
         false,
         false,
         false,
-        true,
-        true,
+        false,
+        false,
+        false,
+        false
+      ]
+    },
+    {
+      "Row": [
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
         false,
         false
       ]
@@ -115,8 +73,24 @@
         false,
         false,
         false,
-        true,
-        true,
+        false,
+        false,
+        false,
+        false
+      ]
+    },
+    {
+      "Row": [
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
         false,
         false
       ]
@@ -131,22 +105,6 @@
         false,
         false,
         false,
-        true,
-        true,
-        false,
-        false
-      ]
-    },
-    {
-      "Row": [
-        false,
-        false,
-        false,
-        true,
-        true,
-        false,
-        false,
-        false,
         false,
         false,
         false,
@@ -156,10 +114,10 @@
     {
       "Row": [
         false,
-        false,
-        false,
         true,
         true,
+        true,
+        false,
         false,
         false,
         false,
@@ -172,10 +130,26 @@
     {
       "Row": [
         false,
+        true,
+        true,
+        true,
         false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false
+      ]
+    },
+    {
+      "Row": [
         false,
         true,
         true,
+        true,
+        false,
         false,
         false,
         false,
@@ -234,7 +208,7 @@
       ]
     }
   ],
-  "Gold": 600,
+  "Gold": 400,
   "Iron": 300,
-  "Wood": 500
+  "Wood": 300
 }

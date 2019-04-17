@@ -68,9 +68,6 @@ namespace game.city.model.remote
                 RemoteData.LastCommandTime = DateTime.Now;
             }
 
-            RemoteData.IsInProduction = true;
-            IsInProduction.Value = true;
-            
             _disposable?.Dispose();
             _disposable = null;
 
@@ -96,6 +93,9 @@ namespace game.city.model.remote
                     IsFull.Value = true;
                 }
             });
+            
+            RemoteData.IsInProduction = true;
+            IsInProduction.Value = true;
         }
 
         public void Construct()
@@ -141,6 +141,7 @@ namespace game.city.model.remote
                 Produce();
             }
             
+            // TODO: Do this in respective Command after moving stuff to the RemoteCommands.
             _signalBus.Fire<SaveGameSignal>();
         }
 
