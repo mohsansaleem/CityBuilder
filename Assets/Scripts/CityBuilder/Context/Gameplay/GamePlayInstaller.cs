@@ -24,7 +24,7 @@ namespace PG.CityBuilder.Context.Gameplay
             Container.BindSignal<AddNewModuleSignal>()
                 .ToMethod<AddNewModuleCommand>(command => command.Execute)
                 .FromNew();
-            
+
             Container.BindInterfacesTo<GamePlayMediator>().AsSingle();
         }
 

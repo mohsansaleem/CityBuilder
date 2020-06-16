@@ -1,4 +1,5 @@
 ﻿using System;
+using PG.CityBuilder.Context.Gameplay;
 using PG.CityBuilder.Installer;
 using PG.CityBuilder.Model;
 using PG.CityBuilder.Model.Context;
@@ -31,46 +32,20 @@ namespace PG.CityBuilder.Context.Bootstrap
         {
             base.Initialize();
 
-            StateBehaviours.Add(typeof(BootstrapMediator.BootstrapStateLoadStaticData), new BootstrapStateLoadStaticData(this));
-            StateBehaviours.Add(typeof(BootstrapStateCreateMetaData), new BootstrapStateCreateMetaData(this)); // Temporary State for creating MetaData
-            StateBehaviours.Add(typeof(BootstrapStateLoadUserData), new BootstrapStateLoadUserData(this));
-            StateBehaviours.Add(typeof(BootstrapStateCreateUserData), new BootstrapStateCreateUserData(this));
-            StateBehaviours.Add(typeof(BootstrapStateGamePlay), new BootstrapStateGamePlay(this));
+            StateBehaviours.Add((int)BootstrapModel.ELoadingProgress.LoadStaticData, new BootstrapStateLoadStaticData(this));
+            StateBehaviours.Add((int)BootstrapModel.ELoadingProgress.CreateMetaData, new BootstrapStateCreateMetaData(this)); // Temporary State for creating MetaData
+            StateBehaviours.Add((int)BootstrapModel.ELoadingProgress.LoadUserData, new BootstrapStateLoadUserData(this));
+            StateBehaviours.Add((int)BootstrapModel.ELoadingProgress.CreateUserData, new BootstrapStateCreateUserData(this));
+            StateBehaviours.Add((int)BootstrapModel.ELoadingProgress.GamePlay, new BootstrapStateGamePlay(this));
             
             _bootstrapModel.LoadingProgress.Subscribe(OnLoadingProgressChanged).AddTo(Disposables);
         }
 
         private void OnLoadingProgressChanged(BootstrapModel.ELoadingProgress loadingProgress)
         {
+            GoToState((int)loadingProgress);
+            
             _view.ProgressBar.value = (float)loadingProgress / 100;
-
-
-            Type targetType = null;
-            switch (loadingProgress)
-            {
-                case BootstrapModel.ELoadingProgress.Zero:
-                    targetType = typeof(BootstrapStateLoadStaticData);
-                    break;
-                case BootstrapModel.ELoadingProgress.MetaNotFound:
-                    targetType = typeof(BootstrapStateCreateMetaData);
-                    break;
-                case BootstrapModel.ELoadingProgress.StaticDataLoaded:
-                    targetType = typeof(BootstrapStateLoadUserData);
-                    break;
-                case BootstrapModel.ELoadingProgress.UserNotFound:
-                    targetType = typeof(BootstrapStateCreateUserData);
-                    break;
-                case BootstrapModel.ELoadingProgress.DataSeeded:
-                    targetType = typeof(BootstrapStateGamePlay);
-                    break;
-            }
-
-            if (targetType != null &&
-                (CurrentStateBehaviour == null ||
-                 targetType != CurrentStateBehaviour.GetType()))
-            {
-                GoToState(targetType);
-            }
         }
 
         private void OnReload()
@@ -81,7 +56,7 @@ namespace PG.CityBuilder.Context.Bootstrap
             (
                 () =>
                 {
-                    _bootstrapModel.LoadingProgress.Value = BootstrapModel.ELoadingProgress.Zero;
+                    _bootstrapModel.LoadingProgress.Value = BootstrapModel.ELoadingProgress.LoadStaticData;
                 },
                 exception =>
                 {

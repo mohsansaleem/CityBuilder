@@ -17,11 +17,11 @@ namespace PG.CityBuilder.Context.Bootstrap
                 LoadUserDataSignal.LoadUserData(SignalBus).Then(
                     () =>
                     {
-                        BootstrapModel.LoadingProgress.Value = Model.Context.BootstrapModel.ELoadingProgress.DataSeeded;
+                        BootstrapModel.LoadingProgress.Value = Model.Context.BootstrapModel.ELoadingProgress.GamePlay;
                     }
                 ).Catch(e =>
                 {
-                    BootstrapModel.LoadingProgress.Value = Model.Context.BootstrapModel.ELoadingProgress.UserNotFound;
+                    BootstrapModel.LoadingProgress.Value = Model.Context.BootstrapModel.ELoadingProgress.CreateUserData;
                 });
             }
         }

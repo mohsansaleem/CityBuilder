@@ -25,7 +25,7 @@ namespace PG.CityBuilder.Context.Bootstrap
                 CreateMetaDataSignal.CreateMetaData(SignalBus, MetaData).Then(
                     () => {
                         _staticDataModel.SeedMetaData(MetaData);
-                        BootstrapModel.LoadingProgress.Value = Model.Context.BootstrapModel.ELoadingProgress.StaticDataLoaded;
+                        BootstrapModel.LoadingProgress.Value = Model.Context.BootstrapModel.ELoadingProgress.LoadUserData;
                     }
                 ).Catch(e =>
                 {

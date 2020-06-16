@@ -7,6 +7,11 @@ namespace PG.CityBuilder.Context.Gameplay
 {
     public class GamePlayView : MonoBehaviour
     {
+        private void Awake()
+        {
+            this.transform.position = Vector3.one;
+        }
+
         [Header("References")] 
         public Transform ModulesRoot;
 

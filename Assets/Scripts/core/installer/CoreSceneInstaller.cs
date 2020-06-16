@@ -7,15 +7,15 @@ namespace PG.Core.Installer
 
     public class CoreSceneInstaller : MonoInstaller
     {
-        private Type _lastValidOpenState = null;
-        public Type LastValidOpenState { get { return _lastValidOpenState; } }
+        private int _lastValidOpenState = -1;
+        public int LastValidOpenState { get { return _lastValidOpenState; } }
 
         public override void InstallBindings()
         {
             Container.Bind<CoreSceneInstaller>().FromInstance(this);
         }
 
-        public void OnNewValidOpenState(Type openState)
+        public void OnNewValidOpenState(int openState)
         {
             _lastValidOpenState = openState;
         }

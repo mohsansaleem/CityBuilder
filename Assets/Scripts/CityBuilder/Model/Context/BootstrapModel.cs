@@ -7,19 +7,19 @@ namespace PG.CityBuilder.Model.Context
         public enum ELoadingProgress
         {
             NotLoaded = -1,
-            Zero = 0,
-            MetaNotFound = 25,
-            StaticDataLoaded = 30,
-            UserNotFound = 50,
-            DataSeeded = 70,
-            GamePlay = 110
+            LoadStaticData = 0,
+            CreateMetaData = 25,
+            LoadUserData = 30,
+            CreateUserData = 50,
+            GamePlay = 70,
+            Running = 110
         }
         
         public ReactiveProperty<ELoadingProgress> LoadingProgress;
 
         public BootstrapModel()
         {
-            LoadingProgress = new ReactiveProperty<ELoadingProgress>(ELoadingProgress.Zero);
+            LoadingProgress = new ReactiveProperty<ELoadingProgress>(ELoadingProgress.LoadStaticData);
         }
     }
     

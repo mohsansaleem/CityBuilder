@@ -7,7 +7,7 @@ using Zenject;
 namespace PG.CityBuilder.Context.Gameplay
 {
     public class SaveGameSignal { }
-
+    
     public class UpdateModulePositionSignal
     {
         public ModuleRemoteDataModel Model;

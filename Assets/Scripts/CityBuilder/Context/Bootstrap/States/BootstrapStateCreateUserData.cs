@@ -25,7 +25,7 @@ namespace PG.CityBuilder.Context.Bootstrap
                 CreateUserDataSignal.CreateUserData(SignalBus, userData).Then(
                     () => {
                         _remoteDataModel.SeedUserData(userData);
-                        BootstrapModel.LoadingProgress.Value = Model.Context.BootstrapModel.ELoadingProgress.DataSeeded;
+                        BootstrapModel.LoadingProgress.Value = Model.Context.BootstrapModel.ELoadingProgress.GamePlay;
                     }
                 ).Catch(e =>
                 {

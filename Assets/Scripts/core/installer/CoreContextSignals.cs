@@ -6,7 +6,7 @@ namespace PG.Core.Installer
 {
     public class RequestStateChangeSignal
     {
-        public Type stateType;
+        public int stateType;
     }
 
 

@@ -19,11 +19,11 @@ namespace PG.CityBuilder.Context.Bootstrap
                 LoadStaticDataSignal.LoadStaticData(SignalBus).Then(
                     () =>
                     {
-                        BootstrapModel.LoadingProgress.Value = Model.Context.BootstrapModel.ELoadingProgress.StaticDataLoaded;
+                        BootstrapModel.LoadingProgress.Value = Model.Context.BootstrapModel.ELoadingProgress.LoadUserData;
                     }
                 ).Catch(e =>
                 {
-                    BootstrapModel.LoadingProgress.Value = Model.Context.BootstrapModel.ELoadingProgress.MetaNotFound;
+                    BootstrapModel.LoadingProgress.Value = Model.Context.BootstrapModel.ELoadingProgress.CreateMetaData;
                 });
             }
         }

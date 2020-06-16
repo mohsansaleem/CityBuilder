@@ -1,4 +1,3 @@
 ﻿namespace PG.CityBuilder.Installer
 {
-    
 }

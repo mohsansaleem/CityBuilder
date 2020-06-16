@@ -1,5 +1,6 @@
-﻿using PG.CityBuilder.Model.Context;
+﻿using PG.CityBuilder.Installer;
 using PG.Core.Installer;
+using UnityEngine;
 
 namespace PG.CityBuilder.Context.Bootstrap
 {
@@ -17,7 +18,11 @@ namespace PG.CityBuilder.Context.Bootstrap
                 
                 LoadUnloadScenesSignal.Load(SignalBus, new[] { Scenes.GamePlay }).Done
                 (
-                    () => { BootstrapModel.LoadingProgress.Value = Model.Context.BootstrapModel.ELoadingProgress.GamePlay; }
+                    () =>
+                    {
+                        Debug.LogError("Going to Fire Event");
+                        BootstrapModel.LoadingProgress.Value = Model.Context.BootstrapModel.ELoadingProgress.Running;
+                    }
                 );
                 
                 View.Hide();

@@ -14,6 +14,19 @@ using Zenject;
 
 namespace PG.CityBuilder.Context.Gameplay
 {
+    public struct testA
+    {
+        private int _a;
+        private int _b;
+
+        public testA(int a)
+        {
+            _a = a;
+            _b = 0;
+        }
+    }
+
+    
     public partial class GamePlayMediator : StateMachineMediator
     {
         [Inject] public ProjectContextInstaller.Settings _projectSettings;
@@ -48,9 +61,9 @@ namespace PG.CityBuilder.Context.Gameplay
         {
             base.Initialize();
 
-            StateBehaviours.Add(typeof(GamePlayStateLoad), new GamePlayStateLoad(this));
-            StateBehaviours.Add(typeof(GamePlayStateRegular), new GamePlayStateRegular(this));
-            StateBehaviours.Add(typeof(GamePlayStateBuild), new GamePlayStateBuild(this));
+            StateBehaviours.Add((int)GamePlayModel.EGamePlayState.Load, new GamePlayStateLoad(this));
+            StateBehaviours.Add((int)GamePlayModel.EGamePlayState.Regular, new GamePlayStateRegular(this));
+            StateBehaviours.Add((int)GamePlayModel.EGamePlayState.Build, new GamePlayStateBuild(this));
 
             // Observing Remote Data.
             _remoteDataModel.ModuleRemoteDatas.ObserveAdd().Subscribe(OnModuleAdd).AddTo(Disposables);
@@ -77,7 +90,6 @@ namespace PG.CityBuilder.Context.Gameplay
             
             _gamePlayModel.GamePlayState.Subscribe(OnGamePlayStateChanged).AddTo(Disposables);
         }
-
 
         private void OnModuleAdd(DictionaryAddEvent<long, ModuleRemoteDataModel> obj)
         {
@@ -154,30 +166,7 @@ namespace PG.CityBuilder.Context.Gameplay
         
         private void OnGamePlayStateChanged(GamePlayModel.EGamePlayState gamePlayState)
         {
-            Type targetType = null;
-            switch (gamePlayState)
-            {
-                case GamePlayModel.EGamePlayState.Load:
-                    targetType = typeof(GamePlayStateLoad);
-                    break;
-                case GamePlayModel.EGamePlayState.Regular:
-                    targetType = typeof(GamePlayStateRegular);
-                    break;
-                case GamePlayModel.EGamePlayState.Build:
-                    targetType = typeof(GamePlayStateBuild);
-                    break;
-            }
-
-            if (targetType != null &&
-                (CurrentStateBehaviour == null ||
-                 targetType != CurrentStateBehaviour.GetType()))
-            {
-                GoToState(targetType);
-
-                // Setting Values.
-                _view.GameModeText.text = gamePlayState.ToString();
-                _view.AddModulePanel.gameObject.SetActive(gamePlayState == GamePlayModel.EGamePlayState.Build);
-            }
+            GoToState((int)gamePlayState);
         }
     }
 }

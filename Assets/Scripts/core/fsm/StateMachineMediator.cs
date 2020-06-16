@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using PG.Core.Installer;
 using UniRx;
+using UnityEngine;
 using Zenject;
 
 namespace PG.Core.FSM
@@ -9,9 +10,8 @@ namespace PG.Core.FSM
     public class StateMachineMediator : IInitializable, ITickable, IDisposable
     {
         protected StateBehaviour CurrentStateBehaviour;
-        protected Dictionary<Type, StateBehaviour> StateBehaviours = new Dictionary<Type, StateBehaviour>();
-
-
+        protected Dictionary<int, StateBehaviour> StateBehaviours = new Dictionary<int, StateBehaviour>();
+        
         protected CompositeDisposable Disposables;
 
         [Inject] protected CoreSceneInstaller SceneInstaller;
@@ -28,17 +28,33 @@ namespace PG.Core.FSM
             GoToState(signal.stateType);
         }
 
-        public virtual void GoToState(Type stateType)
+        public virtual void GoToState(int stateType)
+        {
+            if (!StateBehaviours.ContainsKey(stateType))
+            {
+                Debug.LogWarning("State Missing in Mediator.");
+            }
+            else if(CurrentStateBehaviour == null || StateBehaviours[stateType] != CurrentStateBehaviour)
+            {
+                GoToStateInternal(stateType);
+            }
+        }
+        
+        private void GoToStateInternal(int stateType)
         {
             if (StateBehaviours.ContainsKey(stateType))
             {
-                CurrentStateBehaviour?.OnStateExit();
-                CurrentStateBehaviour = StateBehaviours[stateType];
-                if (SceneInstaller != null && CurrentStateBehaviour.IsValidOpenState())
+                if (CurrentStateBehaviour != null)
                 {
-                    SceneInstaller.OnNewValidOpenState(stateType);
+                    CurrentStateBehaviour.OnStateExit();
                 }
+                CurrentStateBehaviour = StateBehaviours[stateType];
+                
                 CurrentStateBehaviour.OnStateEnter();
+            }
+            else
+            {
+                Debug.LogError($"State Id[{stateType}] doesn't Exist in the Dictionary.");
             }
         }
 
