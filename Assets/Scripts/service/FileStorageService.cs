@@ -1,15 +1,11 @@
 ﻿using System;
 using System.IO;
-using game.city.model;
-using game.city.model.data;
-using game.city.model.remote;
-using game.city.view;
 using Newtonsoft.Json;
 using RSG;
 using UnityEngine;
 using Zenject;
 
-namespace game.service
+namespace PG.Service
 {
     public class FileStorageService : IRemoteDataService
     {

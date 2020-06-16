@@ -1,8 +1,8 @@
 ﻿using System;
-using Zenject;
 using UniRx;
+using Zenject;
 
-namespace game.core.view
+namespace PG.Core.FSM
 {
     public abstract class Mediator : IInitializable, IDisposable
     {

@@ -1,7 +1,7 @@
-﻿using RSG.Promises;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using RSG.Promises;
 
 namespace RSG
 {
@@ -361,10 +361,7 @@ namespace RSG
         {
 //            Argument.NotNull(() => ex);
 
-            if (rejectHandlers != null)
-            {
-                rejectHandlers.Each(handler => InvokeHandler(handler.callback, handler.rejectable, ex));
-            }
+rejectHandlers?.Each(handler => InvokeHandler(handler.callback, handler.rejectable, ex));
 
             ClearHandlers();
         }
@@ -390,10 +387,7 @@ namespace RSG
         /// ADDED: Progress ripped from 3.0
         private void InvokeProgressHandlers(float progress)
         {
-            if (progressHandlers != null)
-            {
-                progressHandlers.Each(handler => InvokeHandler(handler.callback, handler.rejectable, progress));
-            }
+            progressHandlers?.Each(handler => InvokeHandler(handler.callback, handler.rejectable, progress));
         }
 
         /// <summary>
@@ -681,10 +675,7 @@ namespace RSG
 
             Action<Exception> rejectHandler = ex =>
             {
-                if (onRejected != null)
-                {
-                    onRejected(ex);
-                }
+                onRejected?.Invoke(ex);
 
                 resultPromise.Reject(ex);
             };
@@ -726,10 +717,7 @@ namespace RSG
 
             Action<Exception> rejectHandler = ex =>
             {
-                if (onRejected != null)
-                {
-                    onRejected(ex);
-                }
+                onRejected?.Invoke(ex);
 
                 resultPromise.Reject(ex);
             };
@@ -777,10 +765,7 @@ namespace RSG
 
             Action<Exception> rejectHandler = ex =>
             {
-                if (onRejected != null)
-                {
-                    onRejected(ex);
-                }
+                onRejected?.Invoke(ex);
 
                 resultPromise.Reject(ex);
             };
@@ -828,10 +813,7 @@ namespace RSG
 
             Action<Exception> rejectHandler = ex =>
             {
-                if (onRejected != null)
-                {
-                    onRejected(ex);
-                }
+                onRejected?.Invoke(ex);
 
                 resultPromise.Reject(ex);
             };
@@ -861,20 +843,14 @@ namespace RSG
 
             Action<PromisedT> resolveHandler = v =>
             {
-                if (onResolved != null)
-                {
-                    onResolved(v);
-                }
+                onResolved?.Invoke(v);
 
                 resultPromise.Resolve(v);
             };
 
             Action<Exception> rejectHandler = ex =>
             {
-                if (onRejected != null)
-                {
-                    onRejected(ex);
-                }
+                onRejected?.Invoke(ex);
 
                 resultPromise.Reject(ex);
             };
@@ -903,20 +879,14 @@ namespace RSG
 
             Action<PromisedT> resolveHandler = v =>
             {
-                if (onResolved != null)
-                {
-                    onResolved();
-                }
+                onResolved?.Invoke();
 
                 resultPromise.Resolve(v);
             };
 
             Action<Exception> rejectHandler = ex =>
             {
-                if (onRejected != null)
-                {
-                    onRejected(ex);
-                }
+                onRejected?.Invoke(ex);
 
                 resultPromise.Reject(ex);
             };

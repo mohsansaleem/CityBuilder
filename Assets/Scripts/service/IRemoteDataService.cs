@@ -1,9 +1,7 @@
-﻿using game.city.model.data;
-using game.city.model.remote;
-using RSG;
+﻿using RSG;
 using UnityEngine;
 
-namespace game.service
+namespace PG.Service
 {
     public interface IRemoteDataService
     {

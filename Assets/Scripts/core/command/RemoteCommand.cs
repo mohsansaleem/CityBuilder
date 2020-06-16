@@ -1,7 +1,7 @@
-﻿using game.service;
+﻿using PG.Service;
 using Zenject;
 
-namespace game.core.command
+namespace PG.Core.command
 {
     public class RemoteCommand : BaseCommand
     {

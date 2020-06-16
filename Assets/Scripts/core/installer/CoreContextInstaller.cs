@@ -1,7 +1,7 @@
-﻿using game.core.command;
+﻿using PG.Core.command;
 using Zenject;
 
-namespace game.core.installer
+namespace PG.Core.Installer
 {
     public class CoreContextInstaller : MonoInstaller<CoreContextInstaller>
     {
@@ -12,22 +12,22 @@ namespace game.core.installer
 
             Container.DeclareSignal<LoadSceneSignal>().RunAsync();
             Container.BindSignal<LoadSceneSignal>()
-                .ToMethod<LoadSceneCommand>((x, loadParams) => x.Execute(loadParams))
+                .ToMethod<LoadSceneCommand>(command => command.Execute)
                 .FromNew();
 
             Container.DeclareSignal<LoadUnloadScenesSignal>().RunAsync();
             Container.BindSignal<LoadUnloadScenesSignal>()
-                .ToMethod<LoadUnloadScenesCommand>((x, loadParams) => x.Execute(loadParams))
+                .ToMethod<LoadUnloadScenesCommand>(command => command.Execute)
                 .FromNew();
 
             Container.DeclareSignal<UnloadSceneSignal>().RunAsync();
             Container.BindSignal<UnloadSceneSignal>()
-                .ToMethod<UnloadSceneCommand>((x, loadParams) => x.Execute(loadParams))
+                .ToMethod<UnloadSceneCommand>(command => command.Execute)
                 .FromNew();
 
             Container.DeclareSignal<UnloadAllScenesExceptSignal>().RunAsync();
             Container.BindSignal<UnloadAllScenesExceptSignal>()
-                .ToMethod<UnloadAllScenesExceptCommand>((x, loadParams) => x.Execute(loadParams))
+                .ToMethod<UnloadAllScenesExceptCommand>(command => command.Execute)
                 .FromNew();
 
             Container.DeclareSignal<RequestStateChangeSignal>().RunAsync();

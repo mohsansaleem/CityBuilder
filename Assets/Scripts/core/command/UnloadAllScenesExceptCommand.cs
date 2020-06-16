@@ -1,10 +1,10 @@
-﻿using game.core.installer;
+﻿using PG.Core.Installer;
 using RSG;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using Zenject;
 
-namespace game.core.command
+namespace PG.Core.command
 {
     public class UnloadAllScenesExceptCommand : BaseCommand
     {
@@ -24,14 +24,7 @@ namespace game.core.command
 
                 if (scene.isLoaded && !scene.name.Equals(loadParams.Scene))
                 {
-                    if (lastPromise != null)
-                    {
-                        lastPromise = lastPromise.Then(() => _sceneLoader.UnloadScene(scene.name));
-                    }
-                    else
-                    {
-                        lastPromise = _sceneLoader.UnloadScene(scene.name);
-                    }
+                    lastPromise = lastPromise != null ? lastPromise.Then(() => _sceneLoader.UnloadScene(scene.name)) : _sceneLoader.UnloadScene(scene.name);
                 }
             }
 
@@ -41,32 +34,23 @@ namespace game.core.command
                 lastPromise.Done(
                     () =>
                     {
-                        Debug.Log(string.Format("{0} , scene loading/unloading completed!", this));
+                        Debug.Log($"{this} , scene loading/unloading completed!");
 
-                        if (loadParams.OnComplete != null)
-                        {
-                            loadParams.OnComplete.Resolve();
-                        }
+                        loadParams.OnComplete?.Resolve();
                     },
                     exception =>
                     {
-                        Debug.LogError("UnloadAllScenesExceptCommand.Execute: " + exception.ToString());
+                        Debug.LogError("UnloadAllScenesExceptCommand.Execute: " + exception);
 
-                        if (loadParams.OnComplete != null)
-                        {
-                            loadParams.OnComplete.Reject(exception);
-                        }
+                        loadParams.OnComplete?.Reject(exception);
                     }
                 );
             }
             else
             {
-                Debug.Log(string.Format("{0} , no scenes loaded/unloaded!", this));
+                Debug.Log($"{this} , no scenes loaded/unloaded!");
 
-                if (loadParams.OnComplete != null)
-                {
-                    loadParams.OnComplete.Resolve();
-                }
+                loadParams.OnComplete?.Resolve();
             }
         }
     }

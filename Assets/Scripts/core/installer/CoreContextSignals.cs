@@ -2,7 +2,7 @@
 using System;
 using RSG;
 
-namespace game.core.installer
+namespace PG.Core.Installer
 {
     public class RequestStateChangeSignal
     {

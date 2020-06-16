@@ -1,7 +1,7 @@
 ﻿using UniRx;
 using UnityEngine;
 
-namespace game.core
+namespace PG.Core.FSM
 {
     public class StateBehaviour
     {

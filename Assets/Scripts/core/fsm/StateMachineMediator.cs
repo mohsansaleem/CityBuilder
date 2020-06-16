@@ -1,10 +1,10 @@
 ﻿using System;
 using System.Collections.Generic;
-using game.core.installer;
-using Zenject;
+using PG.Core.Installer;
 using UniRx;
+using Zenject;
 
-namespace game.core
+namespace PG.Core.FSM
 {
     public class StateMachineMediator : IInitializable, ITickable, IDisposable
     {
@@ -32,10 +32,7 @@ namespace game.core
         {
             if (StateBehaviours.ContainsKey(stateType))
             {
-                if (CurrentStateBehaviour != null)
-                {
-                    CurrentStateBehaviour.OnStateExit();
-                }
+                CurrentStateBehaviour?.OnStateExit();
                 CurrentStateBehaviour = StateBehaviours[stateType];
                 if (SceneInstaller != null && CurrentStateBehaviour.IsValidOpenState())
                 {
@@ -47,20 +44,14 @@ namespace game.core
 
         public virtual void Tick()
         {
-            if (CurrentStateBehaviour != null)
-            {
-                CurrentStateBehaviour.Tick();
-            }
+            CurrentStateBehaviour?.Tick();
         }
 
         public virtual void Dispose()
         {
             SignalBus.Unsubscribe<RequestStateChangeSignal>(GoToState);
 
-            if (CurrentStateBehaviour != null)
-            {
-                CurrentStateBehaviour.OnStateExit();
-            }
+            CurrentStateBehaviour?.OnStateExit();
 
             Disposables.Dispose();
 

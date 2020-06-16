@@ -1,6 +1,6 @@
 ﻿using UnityEngine;
 
-namespace game.core
+namespace PG.Core
 {
     public class CoroutineRunner : MonoBehaviour
     {

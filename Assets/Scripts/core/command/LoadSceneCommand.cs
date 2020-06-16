@@ -1,7 +1,7 @@
-﻿using game.core.installer;
+﻿using PG.Core.Installer;
 using Zenject;
 
-namespace game.core.command
+namespace PG.Core.command
 {
     public class LoadSceneCommand : BaseCommand
     {
@@ -12,17 +12,11 @@ namespace game.core.command
             _sceneLoader.LoadScene (loadParams.Scene).Done(
                 () =>
                 {
-                    if (loadParams.OnComplete != null)
-                    {
-                        loadParams.OnComplete.Resolve();
-                    }
+                    loadParams.OnComplete?.Resolve();
                 },
                 exception =>
                 {
-                    if (loadParams.OnComplete != null)
-                    {
-                        loadParams.OnComplete.Reject(exception);
-                    }
+                    loadParams.OnComplete?.Reject(exception);
                 }
             );
         }

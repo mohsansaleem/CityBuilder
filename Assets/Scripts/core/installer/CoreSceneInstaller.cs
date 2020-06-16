@@ -1,8 +1,8 @@
 ﻿using Zenject;
-using RSG;
 using System;
+using RSG;
 
-namespace game.core.installer
+namespace PG.Core.Installer
 {
 
     public class CoreSceneInstaller : MonoInstaller
