@@ -1,4 +1,6 @@
-﻿using RSG;
+﻿using PG.City.Model.Data;
+using PG.City.Model.Remote;
+using RSG;
 using UnityEngine;
 
 namespace PG.Service

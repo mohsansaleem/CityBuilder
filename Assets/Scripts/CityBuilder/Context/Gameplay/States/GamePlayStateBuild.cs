@@ -1,6 +1,5 @@
-﻿using PG.City.Model.remote;
+﻿using PG.City.Model.Remote;
 using UnityEngine;
-using PG.Core.PoolFactory;
 
 namespace PG.City.Context.Gameplay
 {

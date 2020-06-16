@@ -4,7 +4,7 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 using Zenject;
 
-namespace PG.Core.command
+namespace PG.Core.Command
 {
     public class UnloadAllScenesExceptCommand : BaseCommand
     {

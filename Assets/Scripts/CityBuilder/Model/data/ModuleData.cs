@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace PG.City.Model.data
+namespace PG.City.Model.Data
 {
     public enum EModuleType
     {

@@ -3,7 +3,7 @@ using RSG;
 using UnityEngine;
 using Zenject;
 
-namespace PG.Core.command
+namespace PG.Core.Command
 {
     public class LoadUnloadScenesCommand : BaseCommand
     {

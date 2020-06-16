@@ -1,5 +1,6 @@
 ﻿using PG.City.Installer;
-using PG.Core.thirdparty.RSG.Promise.v1._3._0._0;
+using PG.Core.PoolFactory;
+using RSG;
 using UnityEngine;
 using Zenject;
 

@@ -1,4 +1,4 @@
-﻿using PG.City.Model.remote;
+﻿using PG.City.Model.Remote;
 using UniRx;
 
 namespace PG.City.Context.Gameplay

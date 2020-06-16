@@ -1,4 +1,5 @@
-﻿using PG.Core.thirdparty.RSG.Promise.v1._3._0._0;
+﻿using PG.Core.PoolFactory;
+using RSG;
 
 namespace PG.City.Context.Gameplay
 {

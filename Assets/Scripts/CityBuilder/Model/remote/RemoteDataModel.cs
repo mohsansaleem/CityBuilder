@@ -1,11 +1,11 @@
 ﻿using System.Linq;
 using PG.City.Context;
-using PG.City.Model.data;
+using PG.City.Model.Data;
 using UniRx;
 using UnityEngine;
 using Zenject;
 
-namespace PG.City.Model.remote
+namespace PG.City.Model.Remote
 {
     public class RemoteDataModel
     {

@@ -3,8 +3,8 @@ using PG.City.Context.Bootstrap;
 using PG.City.Model;
 using UnityEngine;
 using Zenject;
-using PG.Core.command;
-using PG.Core.thirdparty.RSG.Promise.v1._3._0._0;
+using PG.Core.Command;
+using RSG;
 
 namespace PG.City.Command
 {

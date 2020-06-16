@@ -1,7 +1,7 @@
 ﻿using UniRx;
 using UnityEngine;
 
-namespace PG.City.Model.remote
+namespace PG.City.Model.Remote
 {
     public class EntityRemoteDataModel
     {

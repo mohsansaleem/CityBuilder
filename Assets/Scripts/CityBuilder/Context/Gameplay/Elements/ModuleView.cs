@@ -1,5 +1,6 @@
-﻿using PG.City.Model.remote;
-using PG.Core.thirdparty.RSG.Promise.v1._3._0._0;
+﻿using PG.City.Model.Remote;
+using PG.Core.PoolFactory;
+using RSG;
 using UniRx;
 using UnityEngine;
 using UnityEngine.UI;

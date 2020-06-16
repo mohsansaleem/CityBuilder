@@ -1,7 +1,7 @@
-﻿using PG.City.Model.remote;
+﻿using PG.City.Model.Remote;
 using UniRx;
 
-namespace PG.City.Model.scene
+namespace PG.City.Model.Context
 {
     public class GamePlayModel
     {

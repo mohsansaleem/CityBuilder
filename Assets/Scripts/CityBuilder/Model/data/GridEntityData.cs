@@ -1,14 +1,14 @@
 ﻿using System;
-using Sirenix.OdinInspector;
+using UnityEngine;
 
-namespace PG.City.Model.data
+namespace PG.City.Model.Data
 {
     [Serializable]
     public class GridEntityData
     {
-        [MinValue(1), MaxValue(10)]
+        [Range(1, 10)]
         public int Width;
-        [MinValue(1), MaxValue(10)]
+        [Range(1, 10)]
         public int Length;
     }
 }

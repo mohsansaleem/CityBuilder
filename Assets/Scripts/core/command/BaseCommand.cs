@@ -1,7 +1,6 @@
-﻿using System;
-using Zenject;
+﻿using Zenject;
 
-namespace PG.Core.command
+namespace PG.Core.Command
 {
     public class BaseCommand
     {

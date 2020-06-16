@@ -1,7 +1,7 @@
 ﻿using PG.Service;
 using Zenject;
 
-namespace PG.Core.command
+namespace PG.Core.Command
 {
     public class RemoteCommand : BaseCommand
     {

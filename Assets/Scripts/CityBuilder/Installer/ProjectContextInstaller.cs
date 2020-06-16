@@ -4,11 +4,11 @@ using PG.City.Command;
 using PG.City.Context.Bootstrap;
 using PG.City.Context.Gameplay;
 using PG.City.Model;
-using PG.City.Model.data;
-using PG.City.Model.remote;
-using PG.City.Model.scene;
+using PG.City.Model.Data;
+using PG.City.Model.Remote;
+using PG.City.Model.Context;
 using PG.Core.Installer;
-using PG.service;
+using PG.Service;
 using UnityEngine;
 using Zenject;
 

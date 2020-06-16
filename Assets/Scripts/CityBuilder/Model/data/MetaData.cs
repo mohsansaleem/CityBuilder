@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 
-namespace PG.City.Model.data
+namespace PG.City.Model.Data
 {
     [Serializable]
     public class MetaData

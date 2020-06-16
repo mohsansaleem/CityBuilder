@@ -1,4 +1,4 @@
-﻿using PG.Core.thirdparty.RSG.Promise.v1._3._0._0;
+﻿using RSG;
 using UnityEngine;
 
 namespace PG.City.Context.Bootstrap

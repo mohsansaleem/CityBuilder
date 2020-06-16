@@ -1,7 +1,7 @@
 ﻿using System;
 using Newtonsoft.Json;
 
-namespace PG.City.Model.data
+namespace PG.City.Model.Data
 {
     [Serializable]
     public class ModuleRemoteData : GridEntityRemoteData

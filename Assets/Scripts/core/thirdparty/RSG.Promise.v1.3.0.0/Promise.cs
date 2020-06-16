@@ -1,7 +1,7 @@
-﻿using System;
+﻿using RSG.Promises;
+using System;
 using System.Collections.Generic;
 using System.Linq;
-using RSG.Promises;
 
 namespace RSG
 {
@@ -361,7 +361,10 @@ namespace RSG
         {
 //            Argument.NotNull(() => ex);
 
-rejectHandlers?.Each(handler => InvokeHandler(handler.callback, handler.rejectable, ex));
+            if (rejectHandlers != null)
+            {
+                rejectHandlers.Each(handler => InvokeHandler(handler.callback, handler.rejectable, ex));
+            }
 
             ClearHandlers();
         }
@@ -387,7 +390,10 @@ rejectHandlers?.Each(handler => InvokeHandler(handler.callback, handler.rejectab
         /// ADDED: Progress ripped from 3.0
         private void InvokeProgressHandlers(float progress)
         {
-            progressHandlers?.Each(handler => InvokeHandler(handler.callback, handler.rejectable, progress));
+            if (progressHandlers != null)
+            {
+                progressHandlers.Each(handler => InvokeHandler(handler.callback, handler.rejectable, progress));
+            }
         }
 
         /// <summary>
@@ -675,7 +681,10 @@ rejectHandlers?.Each(handler => InvokeHandler(handler.callback, handler.rejectab
 
             Action<Exception> rejectHandler = ex =>
             {
-                onRejected?.Invoke(ex);
+                if (onRejected != null)
+                {
+                    onRejected(ex);
+                }
 
                 resultPromise.Reject(ex);
             };
@@ -717,7 +726,10 @@ rejectHandlers?.Each(handler => InvokeHandler(handler.callback, handler.rejectab
 
             Action<Exception> rejectHandler = ex =>
             {
-                onRejected?.Invoke(ex);
+                if (onRejected != null)
+                {
+                    onRejected(ex);
+                }
 
                 resultPromise.Reject(ex);
             };
@@ -765,7 +777,10 @@ rejectHandlers?.Each(handler => InvokeHandler(handler.callback, handler.rejectab
 
             Action<Exception> rejectHandler = ex =>
             {
-                onRejected?.Invoke(ex);
+                if (onRejected != null)
+                {
+                    onRejected(ex);
+                }
 
                 resultPromise.Reject(ex);
             };
@@ -813,7 +828,10 @@ rejectHandlers?.Each(handler => InvokeHandler(handler.callback, handler.rejectab
 
             Action<Exception> rejectHandler = ex =>
             {
-                onRejected?.Invoke(ex);
+                if (onRejected != null)
+                {
+                    onRejected(ex);
+                }
 
                 resultPromise.Reject(ex);
             };
@@ -843,14 +861,20 @@ rejectHandlers?.Each(handler => InvokeHandler(handler.callback, handler.rejectab
 
             Action<PromisedT> resolveHandler = v =>
             {
-                onResolved?.Invoke(v);
+                if (onResolved != null)
+                {
+                    onResolved(v);
+                }
 
                 resultPromise.Resolve(v);
             };
 
             Action<Exception> rejectHandler = ex =>
             {
-                onRejected?.Invoke(ex);
+                if (onRejected != null)
+                {
+                    onRejected(ex);
+                }
 
                 resultPromise.Reject(ex);
             };
@@ -879,14 +903,20 @@ rejectHandlers?.Each(handler => InvokeHandler(handler.callback, handler.rejectab
 
             Action<PromisedT> resolveHandler = v =>
             {
-                onResolved?.Invoke();
+                if (onResolved != null)
+                {
+                    onResolved();
+                }
 
                 resultPromise.Resolve(v);
             };
 
             Action<Exception> rejectHandler = ex =>
             {
-                onRejected?.Invoke(ex);
+                if (onRejected != null)
+                {
+                    onRejected(ex);
+                }
 
                 resultPromise.Reject(ex);
             };

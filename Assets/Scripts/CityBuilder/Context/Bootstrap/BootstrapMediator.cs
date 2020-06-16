@@ -1,8 +1,8 @@
 ﻿using System;
 using PG.City.Installer;
 using PG.City.Model;
-using PG.City.Model.remote;
-using PG.City.Model.scene;
+using PG.City.Model.Remote;
+using PG.City.Model.Context;
 using PG.Core.FSM;
 using PG.Core.Installer;
 using UniRx;

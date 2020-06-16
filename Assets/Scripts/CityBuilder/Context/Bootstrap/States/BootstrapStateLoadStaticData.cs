@@ -1,4 +1,4 @@
-﻿using PG.City.Model.scene;
+﻿using PG.City.Model.Context;
 
 namespace PG.City.Context.Bootstrap
 {

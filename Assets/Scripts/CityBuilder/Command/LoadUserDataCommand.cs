@@ -1,9 +1,9 @@
 ﻿using Zenject;
 using System;
 using PG.City.Context.Bootstrap;
-using PG.City.Model.remote;
-using PG.City.Model.scene;
-using PG.Core.command;
+using PG.City.Model.Remote;
+using PG.City.Model.Context;
+using PG.Core.Command;
 
 namespace PG.City.Command
 {

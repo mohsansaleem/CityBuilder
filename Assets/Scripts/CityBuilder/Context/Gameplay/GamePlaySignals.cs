@@ -1,6 +1,6 @@
-﻿using PG.City.Model.data;
-using PG.City.Model.remote;
-using PG.Core.thirdparty.RSG.Promise.v1._3._0._0;
+﻿using PG.City.Model.Data;
+using PG.City.Model.Remote;
+using RSG;
 using UnityEngine;
 using Zenject;
 

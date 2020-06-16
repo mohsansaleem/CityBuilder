@@ -1,6 +1,6 @@
-﻿using PG.City.Model.scene;
-using PG.Core.thirdparty.RSG.Promise.v1._3._0._0;
-using Sirenix.Utilities;
+﻿using PG.City.Model.Context;
+using RSG;
+using System.Linq;
 
 namespace PG.City.Context.Gameplay
 {
@@ -35,17 +35,17 @@ namespace PG.City.Context.Gameplay
             {
                 Promise<ModuleView> promise = null;
 
-                RemoteDataModel.ModuleRemoteDatas.ForEach((animalData) =>
+                foreach (var moduleRemoteData in RemoteDataModel.ModuleRemoteDatas)
                 {
                     if (promise == null)
                     {
-                        promise = (Promise<ModuleView>) Mediator.SpawnModuleAndAdd(animalData.Value);
+                        promise = (Promise<ModuleView>) Mediator.SpawnModuleAndAdd(moduleRemoteData.Value);
                     }
                     else
                     {
-                        promise = (Promise<ModuleView>)promise.Then((v) => Mediator.SpawnModuleAndAdd(animalData.Value));
+                        promise = (Promise<ModuleView>)promise.Then((v) => Mediator.SpawnModuleAndAdd(moduleRemoteData.Value));
                     }
-                });
+                }
 
                 if (promise == null)
                 {

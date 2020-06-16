@@ -1,7 +1,7 @@
 ﻿using System.Collections.Generic;
 using PG.City.Installer;
-using PG.City.Model.remote;
-using PG.City.Model.scene;
+using PG.City.Model.Remote;
+using PG.City.Model.Context;
 using PG.Core.FSM;
 
 namespace PG.City.Context.Gameplay

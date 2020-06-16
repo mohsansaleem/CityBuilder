@@ -1,6 +1,6 @@
 ﻿using PG.City.Model;
-using PG.City.Model.data;
-using PG.City.Model.scene;
+using PG.City.Model.Data;
+using PG.City.Model.Context;
 using UnityEngine;
 
 namespace PG.City.Context.Bootstrap

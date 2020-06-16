@@ -1,10 +1,10 @@
 ﻿using Zenject;
 using System;
-using PG.City.installer;
-using PG.City.model;
-using PG.City.model.remote;
-using PG.City.model.scene;
-using PG.core.command;
+using PG.City.Context.Gameplay;
+using PG.City.Model;
+using PG.City.Model.Remote;
+using PG.City.Model.Context;
+using PG.Core.Command;
 
 namespace PG.City.Command
 {

@@ -2,8 +2,8 @@
 using UnityEngine;
 using System;
 using PG.City.Context.Gameplay;
-using PG.City.Model.remote;
-using PG.Core.command;
+using PG.City.Model.Remote;
+using PG.Core.Command;
 
 namespace PG.City.Command
 {

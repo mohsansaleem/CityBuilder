@@ -1,6 +1,6 @@
 ﻿using UniRx;
 
-namespace PG.City.Model.scene
+namespace PG.City.Model.Context
 {
     public class BootstrapModel
     {

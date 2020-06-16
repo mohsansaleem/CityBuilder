@@ -1,4 +1,4 @@
-﻿using PG.City.Model.data;
+﻿using PG.City.Model.Data;
 using UnityEngine;
 
 namespace PG.City.Context.Bootstrap
