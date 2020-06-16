@@ -3,23 +3,81 @@
     {
       "Id": 1,
       "moduleType": 0,
-      "LastCommandTime": "2019-04-18T03:13:03.3601328+05:00",
+      "LastCommandTime": "2020-06-16T06:55:15.98525+05:00",
       "IsInProduction": true,
       "IsInConstruction": false,
       "IsFull": false,
       "CurrentPosition": {
-        "x": 60.0,
+        "x": 0.0,
         "y": 0.0,
-        "z": -10.0
+        "z": 0.0
+      }
+    },
+    {
+      "Id": 637278869503955710,
+      "moduleType": 1,
+      "LastCommandTime": "2020-06-16T06:55:07.567785+05:00",
+      "IsInProduction": false,
+      "IsInConstruction": false,
+      "IsFull": false,
+      "CurrentPosition": {
+        "x": 70.0,
+        "y": 0.0,
+        "z": -90.0
+      }
+    },
+    {
+      "Id": 637278871071783630,
+      "moduleType": 2,
+      "LastCommandTime": "2020-06-16T06:55:13.540203+05:00",
+      "IsInProduction": false,
+      "IsInConstruction": false,
+      "IsFull": false,
+      "CurrentPosition": {
+        "x": 40.0,
+        "y": 0.0,
+        "z": -40.0
       }
     }
   ],
   "Grid": [
     {
       "Row": [
+        true,
+        true,
+        true,
         false,
         false,
         false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false
+      ]
+    },
+    {
+      "Row": [
+        true,
+        true,
+        true,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false
+      ]
+    },
+    {
+      "Row": [
+        true,
+        true,
+        true,
         false,
         false,
         false,
@@ -53,8 +111,40 @@
         false,
         false,
         false,
+        true,
+        true,
         false,
         false,
+        false,
+        false,
+        false,
+        false
+      ]
+    },
+    {
+      "Row": [
+        false,
+        false,
+        false,
+        false,
+        true,
+        true,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false
+      ]
+    },
+    {
+      "Row": [
+        false,
+        false,
+        false,
+        false,
+        true,
+        true,
         false,
         false,
         false,
@@ -74,8 +164,8 @@
         false,
         false,
         false,
-        false,
-        false,
+        true,
+        true,
         false
       ]
     },
@@ -90,72 +180,8 @@
         false,
         false,
         false,
-        false,
-        false,
-        false
-      ]
-    },
-    {
-      "Row": [
-        false,
-        false,
-        false,
-        false,
-        false,
-        false,
-        false,
-        false,
-        false,
-        false,
-        false,
-        false
-      ]
-    },
-    {
-      "Row": [
-        false,
         true,
         true,
-        true,
-        false,
-        false,
-        false,
-        false,
-        false,
-        false,
-        false,
-        false
-      ]
-    },
-    {
-      "Row": [
-        false,
-        true,
-        true,
-        true,
-        false,
-        false,
-        false,
-        false,
-        false,
-        false,
-        false,
-        false
-      ]
-    },
-    {
-      "Row": [
-        false,
-        true,
-        true,
-        true,
-        false,
-        false,
-        false,
-        false,
-        false,
-        false,
-        false,
         false
       ]
     },
@@ -208,7 +234,7 @@
       ]
     }
   ],
-  "Gold": 400,
-  "Iron": 300,
+  "Gold": 1100,
+  "Iron": 350,
   "Wood": 300
 }
