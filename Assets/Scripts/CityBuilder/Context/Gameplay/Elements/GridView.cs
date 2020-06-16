@@ -1,7 +1,7 @@
 ﻿using System;
 using UnityEngine;
 
-namespace PG.City.Context.Gameplay.elements
+namespace PG.CityBuilder.Context.Gameplay.elements
 {   
     public class GridView : MonoBehaviour
     {

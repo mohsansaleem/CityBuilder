@@ -1,7 +1,7 @@
 ﻿using System.Linq;
-using PG.City.Model.Data;
+using PG.CityBuilder.Model.Data;
 
-namespace PG.City.Model
+namespace PG.CityBuilder.Model
 {
     public class StaticDataModel
     {

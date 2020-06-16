@@ -1,12 +1,12 @@
 ﻿using System;
-using PG.City.Context.Bootstrap;
-using PG.City.Model;
+using PG.CityBuilder.Context.Bootstrap;
+using PG.CityBuilder.Model;
 using UnityEngine;
 using Zenject;
 using PG.Core.Command;
 using RSG;
 
-namespace PG.City.Command
+namespace PG.CityBuilder.Command
 {
     public class LoadStaticDataCommand : RemoteCommand
     {

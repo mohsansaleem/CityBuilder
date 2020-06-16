@@ -9,25 +9,25 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2d959224d09e3514ea079b28b2010337, type: 3}
+  m_Script: {fileID: 11500000, guid: 6245a6142ad4449eaa35b34262c428e4, type: 3}
   m_Name: ProjectSettingsInstaller
   m_EditorClassIdentifier: 
   ProjectContextInstaller:
     DefaultGameState: {fileID: 11400000, guid: c1aefaa497380724c9b8b31bbc2fb822, type: 2}
     MetaDataAsset: {fileID: 11400000, guid: baeba42f773325946b89f63ec75f7ebd, type: 2}
     BuildingsPrefabs:
+    - Type: 3
+      Prefab: {fileID: 5393388301532982471, guid: affe66bd566d942f78badd68c1a973d1,
+        type: 3}
+    - Type: 1
+      Prefab: {fileID: 1134808359842559631, guid: 8cb539507e53844abbc6cac81da2fb2a,
+        type: 3}
     - Type: 0
       Prefab: {fileID: 5544763611581036915, guid: 16515dd91ebb84b3a8f20dc29c23264f,
         type: 3}
     - Type: 2
       Prefab: {fileID: 6837885162318440743, guid: add0de247d5e34d7a9fd680d17f7d65a,
         type: 3}
-    - Type: 1
-      Prefab: {fileID: 1134808359842559631, guid: 8cb539507e53844abbc6cac81da2fb2a,
-        type: 3}
     - Type: 4
       Prefab: {fileID: 7051956560768922039, guid: ea2d4810dcf0148cbbdf9f05d44ddfe4,
-        type: 3}
-    - Type: 3
-      Prefab: {fileID: 5393388301532982471, guid: affe66bd566d942f78badd68c1a973d1,
         type: 3}

@@ -1,7 +1,7 @@
 using UnityEngine;
 using Zenject;
 
-namespace PG.City.Installer
+namespace PG.CityBuilder.Installer
 {
     // We prefer to use ScriptableObjectInstaller for installers that contain game settings
     // There's no reason why you couldn't use a MonoInstaller here instead, however

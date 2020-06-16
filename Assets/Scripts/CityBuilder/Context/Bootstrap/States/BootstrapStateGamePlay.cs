@@ -1,7 +1,7 @@
-﻿using PG.City.Model.Context;
+﻿using PG.CityBuilder.Model.Context;
 using PG.Core.Installer;
 
-namespace PG.City.Context.Bootstrap
+namespace PG.CityBuilder.Context.Bootstrap
 {
     public partial class BootstrapMediator
     {
@@ -17,7 +17,7 @@ namespace PG.City.Context.Bootstrap
                 
                 LoadUnloadScenesSignal.Load(SignalBus, new[] { Scenes.GamePlay }).Done
                 (
-                    () => { BootstrapModel.LoadingProgress.Value = BootstrapModel.ELoadingProgress.GamePlay; }
+                    () => { BootstrapModel.LoadingProgress.Value = Model.Context.BootstrapModel.ELoadingProgress.GamePlay; }
                 );
                 
                 View.Hide();

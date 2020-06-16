@@ -1,11 +1,11 @@
 ﻿using System;
-using PG.City.Context.Gameplay;
-using PG.City.Model.Data;
+using PG.CityBuilder.Context.Gameplay;
+using PG.CityBuilder.Model.Data;
 using UniRx;
 using UnityEngine;
 using Zenject;
 
-namespace PG.City.Model.Remote
+namespace PG.CityBuilder.Model.Remote
 {
     public class ModuleRemoteDataModel : EntityRemoteDataModel
     {

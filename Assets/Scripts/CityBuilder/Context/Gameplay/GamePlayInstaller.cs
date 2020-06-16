@@ -1,9 +1,9 @@
-﻿using PG.City.Command;
-using PG.City.Installer;
+﻿using PG.CityBuilder.Command;
+using PG.CityBuilder.Installer;
 using UnityEngine;
 using Zenject;
 
-namespace PG.City.Context.Gameplay
+namespace PG.CityBuilder.Context.Gameplay
 {
     public class GamePlayInstaller : MonoInstaller
     {

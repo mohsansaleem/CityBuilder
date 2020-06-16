@@ -1,7 +1,7 @@
 ﻿using PG.Core.PoolFactory;
 using RSG;
 
-namespace PG.City.Context.Gameplay
+namespace PG.CityBuilder.Context.Gameplay
 {
     public class ResourceView : ModuleView
     {        

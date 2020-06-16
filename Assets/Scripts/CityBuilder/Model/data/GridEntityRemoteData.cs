@@ -2,7 +2,7 @@
 using Newtonsoft.Json;
 using UnityEngine;
 
-namespace PG.City.Model.Data
+namespace PG.CityBuilder.Model.Data
 {
     [Serializable]
     public class GridEntityRemoteData

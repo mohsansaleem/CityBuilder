@@ -1,9 +1,9 @@
-﻿using PG.City.Model.Data;
-using PG.City.Model.Remote;
-using PG.City.Model.Context;
+﻿using PG.CityBuilder.Model.Context;
+using PG.CityBuilder.Model.Data;
+using PG.CityBuilder.Model.Remote;
 using UnityEngine;
 
-namespace PG.City.Context.Bootstrap
+namespace PG.CityBuilder.Context.Bootstrap
 {
     public partial class BootstrapMediator
     {
@@ -25,7 +25,7 @@ namespace PG.City.Context.Bootstrap
                 CreateUserDataSignal.CreateUserData(SignalBus, userData).Then(
                     () => {
                         _remoteDataModel.SeedUserData(userData);
-                        BootstrapModel.LoadingProgress.Value = BootstrapModel.ELoadingProgress.DataSeeded;
+                        BootstrapModel.LoadingProgress.Value = Model.Context.BootstrapModel.ELoadingProgress.DataSeeded;
                     }
                 ).Catch(e =>
                 {

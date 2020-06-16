@@ -1,7 +1,7 @@
 ﻿using RSG;
 using UnityEngine;
 
-namespace PG.City.Context.Bootstrap
+namespace PG.CityBuilder.Context.Bootstrap
 {
     public class PromiseHandler : MonoBehaviour
     {

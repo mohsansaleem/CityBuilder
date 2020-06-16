@@ -1,8 +1,8 @@
-﻿using PG.City.Model.Context;
+﻿using PG.CityBuilder.Model.Context;
 using RSG;
 using System.Linq;
 
-namespace PG.City.Context.Gameplay
+namespace PG.CityBuilder.Context.Gameplay
 {
     public partial class GamePlayMediator
     {
@@ -22,12 +22,12 @@ namespace PG.City.Context.Gameplay
                     // Spawning Modules
                     SpawnModules().Done(((v) =>
                     {
-                        Mediator._gamePlayModel.GamePlayState.SetValueAndForceNotify(GamePlayModel.EGamePlayState.Regular);
+                        Mediator._gamePlayModel.GamePlayState.SetValueAndForceNotify(Model.Context.GamePlayModel.EGamePlayState.Regular);
                     }));
                 }
                 else
                 {
-                    Mediator._gamePlayModel.GamePlayState.SetValueAndForceNotify(GamePlayModel.EGamePlayState.Regular);
+                    Mediator._gamePlayModel.GamePlayState.SetValueAndForceNotify(Model.Context.GamePlayModel.EGamePlayState.Regular);
                 }
             }
 

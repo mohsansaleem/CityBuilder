@@ -1,8 +1,8 @@
 ﻿using System;
-using PG.City.Model.Remote;
+using PG.CityBuilder.Model.Remote;
 using PG.Core.PoolFactory;
 
-namespace PG.City.Context.Gameplay
+namespace PG.CityBuilder.Context.Gameplay
 {   
     public abstract class Movable : FactoryObject
     {

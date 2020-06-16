@@ -1,7 +1,7 @@
-﻿using PG.City.Model.Data;
+﻿using PG.CityBuilder.Model.Data;
 using UnityEngine;
 
-namespace PG.City.Context.Bootstrap
+namespace PG.CityBuilder.Context.Bootstrap
 {
     [CreateAssetMenu(menuName = "Game/Default GameState")]
     public class DefaultGameState : ScriptableObject

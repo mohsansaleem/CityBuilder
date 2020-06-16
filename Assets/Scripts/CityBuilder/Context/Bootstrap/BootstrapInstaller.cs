@@ -1,8 +1,8 @@
-﻿using PG.City.Command;
+﻿using PG.CityBuilder.Command;
 using UnityEngine;
 using Zenject;
 
-namespace PG.City.Context.Bootstrap
+namespace PG.CityBuilder.Context.Bootstrap
 {
     public class BootstrapInstaller : MonoInstaller
     {

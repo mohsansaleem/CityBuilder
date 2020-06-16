@@ -1,6 +1,6 @@
 ﻿using UniRx;
 
-namespace PG.City.Model.Context
+namespace PG.CityBuilder.Model.Context
 {
     public class BootstrapModel
     {

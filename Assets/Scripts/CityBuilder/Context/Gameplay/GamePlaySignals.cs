@@ -1,10 +1,10 @@
-﻿using PG.City.Model.Data;
-using PG.City.Model.Remote;
+﻿using PG.CityBuilder.Model.Data;
+using PG.CityBuilder.Model.Remote;
 using RSG;
 using UnityEngine;
 using Zenject;
 
-namespace PG.City.Context.Gameplay
+namespace PG.CityBuilder.Context.Gameplay
 {
     public class SaveGameSignal { }
 

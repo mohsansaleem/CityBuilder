@@ -1,9 +1,9 @@
-﻿using PG.City.Model;
-using PG.City.Model.Data;
-using PG.City.Model.Context;
+﻿using PG.CityBuilder.Model.Context;
+using PG.CityBuilder.Model;
+using PG.CityBuilder.Model.Data;
 using UnityEngine;
 
-namespace PG.City.Context.Bootstrap
+namespace PG.CityBuilder.Context.Bootstrap
 {
     public partial class BootstrapMediator
     {
@@ -25,7 +25,7 @@ namespace PG.City.Context.Bootstrap
                 CreateMetaDataSignal.CreateMetaData(SignalBus, MetaData).Then(
                     () => {
                         _staticDataModel.SeedMetaData(MetaData);
-                        BootstrapModel.LoadingProgress.Value = BootstrapModel.ELoadingProgress.StaticDataLoaded;
+                        BootstrapModel.LoadingProgress.Value = Model.Context.BootstrapModel.ELoadingProgress.StaticDataLoaded;
                     }
                 ).Catch(e =>
                 {

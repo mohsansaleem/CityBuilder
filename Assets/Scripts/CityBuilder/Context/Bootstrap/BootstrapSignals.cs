@@ -1,8 +1,8 @@
-﻿using PG.City.Model.Data;
+﻿using PG.CityBuilder.Model.Data;
 using RSG;
 using Zenject;
 
-namespace PG.City.Context.Bootstrap
+namespace PG.CityBuilder.Context.Bootstrap
 {
     public class LoadStaticDataSignal
     {

@@ -1,9 +1,9 @@
-﻿using PG.City.Context.Gameplay.elements;
-using PG.City.Model.Data;
+﻿using PG.CityBuilder.Context.Gameplay.elements;
+using PG.CityBuilder.Model.Data;
 using UnityEngine;
 using UnityEngine.UI;
 
-namespace PG.City.Context.Gameplay
+namespace PG.CityBuilder.Context.Gameplay
 {
     public class GamePlayView : MonoBehaviour
     {

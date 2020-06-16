@@ -1,6 +1,6 @@
-﻿using PG.City.Model.Context;
+﻿using PG.CityBuilder.Model.Context;
 
-namespace PG.City.Context.Bootstrap
+namespace PG.CityBuilder.Context.Bootstrap
 {
     public partial class BootstrapMediator
     {
@@ -17,11 +17,11 @@ namespace PG.City.Context.Bootstrap
                 LoadUserDataSignal.LoadUserData(SignalBus).Then(
                     () =>
                     {
-                        BootstrapModel.LoadingProgress.Value = BootstrapModel.ELoadingProgress.DataSeeded;
+                        BootstrapModel.LoadingProgress.Value = Model.Context.BootstrapModel.ELoadingProgress.DataSeeded;
                     }
                 ).Catch(e =>
                 {
-                    BootstrapModel.LoadingProgress.Value = BootstrapModel.ELoadingProgress.UserNotFound;
+                    BootstrapModel.LoadingProgress.Value = Model.Context.BootstrapModel.ELoadingProgress.UserNotFound;
                 });
             }
         }

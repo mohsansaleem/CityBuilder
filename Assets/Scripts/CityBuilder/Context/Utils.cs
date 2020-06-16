@@ -1,4 +1,4 @@
-﻿namespace PG.City.Context
+﻿namespace PG.CityBuilder.Context
 {
     public static class Utils
     {

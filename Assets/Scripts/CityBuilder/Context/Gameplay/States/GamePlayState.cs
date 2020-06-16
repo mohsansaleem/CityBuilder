@@ -1,10 +1,10 @@
 ﻿using System.Collections.Generic;
-using PG.City.Installer;
-using PG.City.Model.Remote;
-using PG.City.Model.Context;
+using PG.CityBuilder.Installer;
+using PG.CityBuilder.Model.Context;
+using PG.CityBuilder.Model.Remote;
 using PG.Core.FSM;
 
-namespace PG.City.Context.Gameplay
+namespace PG.CityBuilder.Context.Gameplay
 {
     public partial class GamePlayMediator
     {

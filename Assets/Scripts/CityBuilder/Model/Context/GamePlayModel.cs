@@ -1,7 +1,7 @@
-﻿using PG.City.Model.Remote;
+﻿using PG.CityBuilder.Model.Remote;
 using UniRx;
 
-namespace PG.City.Model.Context
+namespace PG.CityBuilder.Model.Context
 {
     public class GamePlayModel
     {

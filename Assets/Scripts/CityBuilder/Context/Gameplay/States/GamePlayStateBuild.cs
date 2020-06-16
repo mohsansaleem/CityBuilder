@@ -1,7 +1,7 @@
-﻿using PG.City.Model.Remote;
+﻿using PG.CityBuilder.Model.Remote;
 using UnityEngine;
 
-namespace PG.City.Context.Gameplay
+namespace PG.CityBuilder.Context.Gameplay
 {
     public partial class GamePlayMediator
     {

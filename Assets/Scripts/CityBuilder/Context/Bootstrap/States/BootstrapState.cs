@@ -1,9 +1,9 @@
-﻿using PG.City.Installer;
-using PG.City.Model.Context;
+﻿using PG.CityBuilder.Installer;
+using PG.CityBuilder.Model.Context;
 using PG.Core.FSM;
 using Zenject;
 
-namespace PG.City.Context.Bootstrap
+namespace PG.CityBuilder.Context.Bootstrap
 {
     public partial class BootstrapMediator
     {

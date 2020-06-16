@@ -1,10 +1,10 @@
-﻿using PG.City.Installer;
+﻿using PG.CityBuilder.Installer;
 using PG.Core.PoolFactory;
 using RSG;
 using UnityEngine;
 using Zenject;
 
-namespace PG.City.Context.Gameplay
+namespace PG.CityBuilder.Context.Gameplay
 {
     public class ModuleFactory : IAsyncGenericAssetFactory<BuildingPrefab, FactoryObject>
     {

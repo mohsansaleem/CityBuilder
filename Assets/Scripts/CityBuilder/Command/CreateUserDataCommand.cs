@@ -1,10 +1,10 @@
 ﻿using Zenject;
 using System;
-using PG.City.Context.Bootstrap;
-using PG.City.Model.Context;
+using PG.CityBuilder.Context.Bootstrap;
+using PG.CityBuilder.Model.Context;
 using PG.Core.Command;
 
-namespace PG.City.Command
+namespace PG.CityBuilder.Command
 {
     public class CreateUserDataCommand : RemoteCommand
     {

@@ -1,11 +1,11 @@
 ﻿using Zenject;
 using System;
-using PG.City.Context.Gameplay;
-using PG.City.Model.Remote;
-using PG.City.Model.Context;
+using PG.CityBuilder.Context.Gameplay;
+using PG.CityBuilder.Model.Context;
+using PG.CityBuilder.Model.Remote;
 using PG.Core.Command;
 
-namespace PG.City.Command
+namespace PG.CityBuilder.Command
 {
     public class UpdateModulePositionCommand : RemoteCommand
     {

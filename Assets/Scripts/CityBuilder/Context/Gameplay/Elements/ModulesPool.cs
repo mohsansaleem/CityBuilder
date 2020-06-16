@@ -1,8 +1,8 @@
-﻿using PG.City.Installer;
+﻿using PG.CityBuilder.Installer;
 using PG.Core.PoolFactory;
 using RSG;
 
-namespace PG.City.Context.Gameplay
+namespace PG.CityBuilder.Context.Gameplay
 {
     public class ModulesPool : KeyedAsyncGenericMonoMemoryPool<BuildingPrefab, FactoryObjectParams, FactoryObject>
     {

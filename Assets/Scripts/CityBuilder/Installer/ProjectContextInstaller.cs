@@ -1,18 +1,18 @@
 ﻿using System;
 using System.Collections.Generic;
-using PG.City.Command;
-using PG.City.Context.Bootstrap;
-using PG.City.Context.Gameplay;
-using PG.City.Model;
-using PG.City.Model.Data;
-using PG.City.Model.Remote;
-using PG.City.Model.Context;
+using PG.CityBuilder.Command;
+using PG.CityBuilder.Context.Bootstrap;
+using PG.CityBuilder.Context.Gameplay;
+using PG.CityBuilder.Model;
+using PG.CityBuilder.Model.Context;
+using PG.CityBuilder.Model.Data;
+using PG.CityBuilder.Model.Remote;
 using PG.Core.Installer;
 using PG.Service;
 using UnityEngine;
 using Zenject;
 
-namespace PG.City.Installer
+namespace PG.CityBuilder.Installer
 {
     public class ProjectContextInstaller : CoreContextInstaller
     {

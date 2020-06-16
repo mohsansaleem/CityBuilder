@@ -1,5 +1,5 @@
-﻿using PG.City.Model.Data;
-using PG.City.Model.Remote;
+﻿using PG.CityBuilder.Model.Data;
+using PG.CityBuilder.Model.Remote;
 using RSG;
 using UnityEngine;
 
