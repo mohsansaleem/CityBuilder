@@ -2,6 +2,13 @@
 
 This is a simple farm game with the raw UI. Primary purpose of this project was to implement an expandable architecture. 
 
+We can build and collect resources. In Move Mode we can move the building around.
+TownHall automatically starts production of the resources. Remaining buildings need the user input to start production.
+
+__Video__
+
+[![IMAGE ALT TEXT](http://img.youtube.com/vi/LrCwR09Xdm0/0.jpg)](http://www.youtube.com/watch?v=LrCwR09Xdm0 "City Builder")
+
 ##### Highlights:
   - Unity 2019.4.0f1
   - MVP
