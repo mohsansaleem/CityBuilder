@@ -4,6 +4,7 @@ using PG.CityBuilder.Installer;
 using PG.CityBuilder.Model;
 using PG.CityBuilder.Model.Context;
 using PG.CityBuilder.Model.Remote;
+using PG.CityBuilder.Views.Bootstrap;
 using PG.Core.FSM;
 using PG.Core.Installer;
 using UniRx;

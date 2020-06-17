@@ -1,11 +1,12 @@
-﻿using PG.CityBuilder.Model.Remote;
+﻿using PG.CityBuilder.Context.Gameplay;
+using PG.CityBuilder.Model.Remote;
 using PG.Core.PoolFactory;
 using RSG;
 using UniRx;
 using UnityEngine;
 using UnityEngine.UI;
 
-namespace PG.CityBuilder.Context.Gameplay
+namespace PG.CityBuilder.Views.Gameplay
 {
     public class ModuleView : Movable
     {

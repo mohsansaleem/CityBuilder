@@ -6,6 +6,7 @@ using PG.CityBuilder.Model;
 using PG.CityBuilder.Model.Context;
 using PG.CityBuilder.Model.Data;
 using PG.CityBuilder.Model.Remote;
+using PG.CityBuilder.Views.Gameplay;
 using PG.Core.FSM;
 using RSG;
 using UniRx;
@@ -61,9 +62,9 @@ namespace PG.CityBuilder.Context.Gameplay
         {
             base.Initialize();
 
-            StateBehaviours.Add((int)GamePlayModel.EGamePlayState.Load, new GamePlayStateLoad(this));
-            StateBehaviours.Add((int)GamePlayModel.EGamePlayState.Regular, new GamePlayStateRegular(this));
-            StateBehaviours.Add((int)GamePlayModel.EGamePlayState.Build, new GamePlayStateBuild(this));
+            StateBehaviours.Add((int)EGamePlayState.Load, new GamePlayStateLoad(this));
+            StateBehaviours.Add((int)EGamePlayState.Regular, new GamePlayStateRegular(this));
+            StateBehaviours.Add((int)EGamePlayState.Build, new GamePlayStateBuild(this));
 
             // Observing Remote Data.
             _remoteDataModel.ModuleRemoteDatas.ObserveAdd().Subscribe(OnModuleAdd).AddTo(Disposables);
@@ -74,10 +75,10 @@ namespace PG.CityBuilder.Context.Gameplay
             _remoteDataModel.Iron.Subscribe(iron => _view.IronText.text = iron.ToString()).AddTo(Disposables);
             
             _view.RegularModeButton.onClick.AddListener(() => 
-                _gamePlayModel.GamePlayState.Value = GamePlayModel.EGamePlayState.Regular);
+                _gamePlayModel.GamePlayState.Value = EGamePlayState.Regular);
             
             _view.BuildModeButton.onClick.AddListener(() => 
-                _gamePlayModel.GamePlayState.Value = GamePlayModel.EGamePlayState.Build);
+                _gamePlayModel.GamePlayState.Value = EGamePlayState.Build);
             
             // Adding all the Modules. Costly and lame but works.
             _view.ModuleSelectionDropDown.AddOptions(GetModulesList());
@@ -86,7 +87,7 @@ namespace PG.CityBuilder.Context.Gameplay
             _view.AddModule.onClick.AddListener(()=> AddNewModuleSignal.AddModule(SignalBus,
                 (EModuleType)_view.ModuleSelectionDropDown.value));
             
-            OnGamePlayStateChanged(GamePlayModel.EGamePlayState.Load);
+            OnGamePlayStateChanged(EGamePlayState.Load);
             
             _gamePlayModel.GamePlayState.Subscribe(OnGamePlayStateChanged).AddTo(Disposables);
         }
@@ -164,8 +165,10 @@ namespace PG.CityBuilder.Context.Gameplay
                 .ToList();
         }
         
-        private void OnGamePlayStateChanged(GamePlayModel.EGamePlayState gamePlayState)
+        private void OnGamePlayStateChanged(EGamePlayState gamePlayState)
         {
+            _view.GameModeText.text = gamePlayState.ToString();
+            
             GoToState((int)gamePlayState);
         }
     }

@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 using UnityEngine.UI;
 
-namespace PG.CityBuilder.Context.Bootstrap
+namespace PG.CityBuilder.Views.Bootstrap
 {
     public class BootstrapView : MonoBehaviour
     {

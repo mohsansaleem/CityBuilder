@@ -3,7 +3,7 @@ using PG.CityBuilder.Model.Data;
 using UnityEngine;
 using UnityEngine.UI;
 
-namespace PG.CityBuilder.Context.Gameplay
+namespace PG.CityBuilder.Views.Gameplay
 {
     public class GamePlayView : MonoBehaviour
     {

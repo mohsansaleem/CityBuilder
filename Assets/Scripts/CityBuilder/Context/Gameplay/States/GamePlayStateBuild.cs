@@ -1,4 +1,5 @@
 ﻿using PG.CityBuilder.Model.Remote;
+using PG.CityBuilder.Views.Gameplay;
 using UnityEngine;
 
 namespace PG.CityBuilder.Context.Gameplay

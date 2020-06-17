@@ -5,14 +5,6 @@ namespace PG.CityBuilder.Model.Context
 {
     public class GamePlayModel
     {
-        public enum EGamePlayState
-        {
-            Load = 0,
-            Regular,
-            Build,
-            Pause
-        }
-
         public readonly ReactiveProperty<EGamePlayState> GamePlayState;
         public readonly ReactiveProperty<ModuleRemoteDataModel> SelectedModule;
 
@@ -21,6 +13,14 @@ namespace PG.CityBuilder.Model.Context
             GamePlayState = new ReactiveProperty<EGamePlayState>(EGamePlayState.Load);
             SelectedModule = new ReactiveProperty<ModuleRemoteDataModel>(null);
         }
+    }
+    
+    public enum EGamePlayState
+    {
+        Load = 0,
+        Regular,
+        Build,
+        Pause
     }
 }
 

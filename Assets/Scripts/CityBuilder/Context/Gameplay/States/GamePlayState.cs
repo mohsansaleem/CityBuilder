@@ -2,6 +2,7 @@
 using PG.CityBuilder.Installer;
 using PG.CityBuilder.Model.Context;
 using PG.CityBuilder.Model.Remote;
+using PG.CityBuilder.Views.Gameplay;
 using PG.Core.FSM;
 
 namespace PG.CityBuilder.Context.Gameplay

@@ -1,6 +1,7 @@
 ﻿using PG.CityBuilder.Model.Context;
 using RSG;
 using System.Linq;
+using PG.CityBuilder.Views.Gameplay;
 
 namespace PG.CityBuilder.Context.Gameplay
 {
@@ -22,12 +23,12 @@ namespace PG.CityBuilder.Context.Gameplay
                     // Spawning Modules
                     SpawnModules().Done(((v) =>
                     {
-                        Mediator._gamePlayModel.GamePlayState.SetValueAndForceNotify(Model.Context.GamePlayModel.EGamePlayState.Regular);
+                        Mediator._gamePlayModel.GamePlayState.SetValueAndForceNotify(EGamePlayState.Regular);
                     }));
                 }
                 else
                 {
-                    Mediator._gamePlayModel.GamePlayState.SetValueAndForceNotify(Model.Context.GamePlayModel.EGamePlayState.Regular);
+                    Mediator._gamePlayModel.GamePlayState.SetValueAndForceNotify(EGamePlayState.Regular);
                 }
             }
 
